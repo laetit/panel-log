@@ -1,0 +1,88 @@
+
+@mixin btn-primary(){
+	background-color: white;
+	border: 2px solid $border-color;
+	color: $dark_secundary-color;
+	padding: .5em;
+	flex: 2;
+	cursor: pointer;
+	@include shadow($light-shadow);
+
+	&:hover {
+		@include shadow(0px 0px 15px $dark_primary-color);
+	}
+}
+
+@mixin btn-login(){
+	cursor: pointer;
+	color: #FFF;
+	border: none;
+	border-radius: 9px;
+	width: 132px;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
+	height: 32px;
+	display: flex;
+	user-select: none;
+	margin: 10px;
+}
+
+@mixin btn-filter(){
+	display: flex;
+	align-items: center;
+	color: $dark_secundary-color;
+	background-color: white;
+	border: 2px solid $border-color;
+	@include shadow($light-shadow);
+
+	&:hover {
+		@include shadow(0px 0px 15px $dark_primary-color);
+	}
+}
+
+@mixin simple-icon(){
+	width: 20px;
+	height: 20px;
+	padding: 0 5px;
+	fill: $dark_secundary-color
+}
+
+@mixin shadow($value){
+	box-shadow: $value;
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	-o-box-shadow: $value;
+	-ms-box-shadow: $value;
+}
+
+@mixin border-radius($radius){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+@mixin user-select($select){
+	user-select: $select;
+	-webkit-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select;
+}
+
+@mixin transition($time){
+	transition: $time;
+	-webkit-transition: $time;
+	-moz-transition: $time;
+	-o-transition: $time;
+	-ms-transition: $time;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../../src/font/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+

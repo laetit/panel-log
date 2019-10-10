@@ -1,0 +1,39 @@
+{
+  "name": "panel-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "i18next": "^17.0.13",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-csv": "^1.1.1",
+    "react-dom": "^16.8.6",
+    "react-i18next": "^10.12.2",
+    "react-notifications": "^1.4.3",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-svg": "^10.0.14",
+    "react-with-styles": "^3.2.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

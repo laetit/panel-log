@@ -1,0 +1,127 @@
+@import "../../styles/main.scss";
+
+$width-navmenu: 150px;
+
+.navmenu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #fff;
+	overflow: hidden;
+	box-shadow: $light-shadow;
+	width: 58px;
+	min-height: 100%;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	@include user-select(none);
+	@include transition(0.5s);
+	.sub-menu{
+		height: 0;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	&:hover {
+		width: $width-navmenu;
+		transition: 0.5s;
+		box-shadow: $light-shadow;
+		.openOption + .sub-menu {
+			height: auto;
+	  	}
+	  
+	}
+  .option-menu {
+		cursor: pointer;
+		display: flex;
+		font-size: 14px;
+		color: $dark_secundary-color;
+		align-items: center;
+		text-decoration: none;
+		min-width: 200px;
+		overflow: hidden;
+		p {
+
+			padding-left: 10px;
+		}
+		&:hover {
+			background-color: $background-color;
+		}
+		.menuActive {
+			border-left: $dark_primary-color 4px solid;
+		}
+	}
+    .sub-menu {
+		height: 0;
+		background-color: #f0efef;
+		overflow: hidden;
+		&:hover {
+			height: $width-navmenu;
+		}
+		a {
+			justify-content: center;
+		&:hover {
+			background-color: $light_secundary-color;
+		}
+		}
+		p {
+			font-size: 90%;
+			font-weight: normal;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.div-version{
+		display: flex;
+		align-content: flex-end;
+		justify-content: flex-end;
+		color: $dark_secundary-color;
+		width: $width-navmenu;
+		p{
+			padding-bottom: .5em;
+			padding-right: .5em;
+			font-size: 10px;
+			display: flex;
+			justify-content: flex-end;
+			margin: 0;
+			width: auto;
+		}
+	}
+}
+
+.option-menu .icon-menu{
+	padding-right: 10px;
+	padding-left: 14px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.icon-menu svg {
+	height: 30px;
+	width: 30px;
+	fill: $dark_secundary-color;
+}
+
+.id-menu {
+	color: #fff;
+	font-size: 12px;
+	a{
+		text-decoration: none;
+		color: inherit;
+		font-weight: bold;
+	}
+}
+
+.top {
+	padding-left: 10px;
+	justify-content: space-between;
+	background-color: $light_primary-color;
+	height: 40px;
+}
+
+.option-menu.top:hover {
+  background-color: $light_primary-color;
+}

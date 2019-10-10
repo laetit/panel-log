@@ -1,0 +1,68 @@
+@import '../../styles/main.scss';
+
+.login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	z-index: 1;
+	overflow: hidden;
+
+	.background-login{
+		top: -60px;
+		left: -20px;
+		height: 50vh;
+		width: 110vw;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		transform: rotate(-3deg);
+		z-index: -1;
+		filter: blur(3px);
+		background-image: url('./src/panel.jpg');
+	}
+
+	.form-login{
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+		align-items: center;
+		background-color: #fff;
+		border-left: 5px solid #2196f3;
+		border-radius: 3px;
+		height: 300px;
+		box-shadow: 1px 1px 23px rgba(0,0,0,0.1);
+		width: 46%;
+		overflow: visible;
+
+		.info-login{
+			display: flex;
+			flex-direction: column;
+			width: 45%;
+			font-size: 14px;
+			label{
+				margin-top: 10px;
+			}
+		}
+		h1{
+			font-size: 20px;
+		}
+		.divBtn-login{
+			background-color: $light_primary-color;
+			@include btn-login();
+		}
+		.divBtn-blocked {
+			background-color: rgb(173, 173, 173);
+			cursor: not-allowed;
+			@include btn-login();
+		}
+		input{
+			border: 1px solid #ccc;
+			padding: 7px;
+			margin-top: 5px;
+			resize: none;
+			background-color: #FFF;
+			width: 100%;
+		}
+	}
+}

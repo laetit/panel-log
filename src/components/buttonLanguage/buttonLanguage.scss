@@ -1,0 +1,15 @@
+@import '../../styles/main.scss';
+
+.div-language{
+	position: absolute;
+	top: 4em;
+    right: 10em;
+	z-index: 80;
+	.btn-language{
+		width: 50px;
+		border-radius: 32px;
+		svg{
+			fill: $light-primary-color;
+		}
+	}
+}

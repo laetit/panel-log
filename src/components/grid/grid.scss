@@ -1,0 +1,158 @@
+@import '../../styles/main.scss';
+
+.grid{
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 8px;
+
+    .grid-table{
+        flex: 1;
+				width: 100%;
+				height: 76vh;
+				background-color: $divider_color;
+				box-shadow: $light-shadow;
+        border-radius: 5px;
+        position: relative;
+        min-height: 300px;
+        display: flex;
+				flex-direction: column;
+				font-size: 74%;
+    }
+    .grid-header{
+        font-weight: 700;
+				display: flex;
+				overflow: hidden;
+
+        th:hover{
+            color: $light_primary-color
+        }
+    }
+
+    .grid-row{
+        padding: 1em;
+				margin: 4px;
+				justify-content: center;
+    }
+
+    .dropdownfilter .filterlist{
+        z-index: 99999;
+    }
+
+    .grid-body:hover, .grid-body.selected{
+        color: $light_primary-color;
+        background-color: #d5edff!important;
+		}
+		
+		.grid-body.selected{
+			border-left: 4px solid $dark_primary-color;
+			border-right: 4px solid $dark_primary-color
+		}
+
+    tr{
+        display: flex;
+    }
+
+    th,td{
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .number{
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .grid-paginator{
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 16px 0px;
+        display: flex;
+
+        .back, .next{
+            height: 21px;
+            width: 21px;
+            border-radius: 50%;
+            background-image: url('./src/arrow.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .back{
+            transform: rotateY(180deg)
+        }
+    }
+
+    .grid-content{
+        scroll-behavior: smooth;
+				overflow-y: scroll;
+				
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+        tr:nth-child(odd){
+            background-color: #f8f8f8;
+        }
+    } 
+   
+    .grid-see-more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #2196f3;
+        transition: 0.5s
+    }
+
+    .grid-see-more:hover{
+        transform: scale(1.1);
+        transition: 0.5s
+    }
+
+    .grid-see-more:active{
+        transform: scale(0.8);
+        transition: 0.5s;
+        user-select: none
+    }
+
+    .download-button{
+        color: #2196f3;
+        background-color: #d5edff;
+        padding: 8px;
+        border-radius: 5px;
+        position: absolute;
+        transition: 0.5s;
+        margin: 8px 0px;
+    }
+
+    .download-button:hover{
+        color: #d5edff;
+        background-color: #2196f3
+    }
+
+    .download-button:active{
+        transform: scale(0.8);
+        transition: 0.5s;
+    }
+
+    .search-grid{
+        display: flex;
+        padding: 8px 0px;
+
+        input{
+            flex: 1;
+            margin: 0;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: -4px
+        }
+
+        .dropdownfilter{
+            border: 1px solid #ccc;
+            box-shadow: none;
+            border-radius: 5px
+        }
+    }
+}

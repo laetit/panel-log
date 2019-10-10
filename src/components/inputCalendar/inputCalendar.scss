@@ -1,0 +1,15 @@
+@import '../../styles/main.scss';
+
+.SingleDatePicker {
+
+	.SingleDatePickerInput {
+		border: none;
+		border-radius: 5px;
+		.DateInput {
+
+			input{
+				width: 10em;
+			}
+		}
+	}	
+}

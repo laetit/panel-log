@@ -1,0 +1,16 @@
+
+$dark-shadow: 3px 3px 11px rgba(149, 151, 158, 0.3);
+$light-shadow: 2px 2px 11px rgba(171,174,185,.3);
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type='checkbox'],
+select {
+  font-size: 12px;
+	box-shadow: $light-shadow;
+	border: none;
+  border-radius: 5px;
+  padding: 8px 8px;
+  outline: none;
+}

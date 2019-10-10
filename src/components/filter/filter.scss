@@ -1,0 +1,102 @@
+@import '../../styles/main.scss';
+
+.container-filter{
+	display: flex;
+
+	form {
+		color: $dark_secundary-color;
+		display: flex;
+		position: fixed;
+		overflow-y: scroll;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		justify-content: center;
+    right: 0;
+    bottom: 0;
+    top: 8em;
+		width: 300px;
+		@include transition(.5s);
+
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.div-submit{
+			min-width: 300px;
+			justify-content: center;
+			display: flex;
+			margin-top: 4px;
+		}
+
+		button{
+			max-width: 100px;
+			@include btn-primary();
+			@include shadow($light-shadow);
+
+			&:hover {
+				@include shadow(0px 0px 15px $dark_primary-color);
+			}
+
+			&.loading {
+				pointer-events: none;
+			}
+		}
+
+		.container-checkbox{
+			display: flex;
+			flex-direction: row;
+			flex: 2 1;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: .5em 0;
+
+			.option-checkbox{
+				display: flex;
+				flex-direction: row;
+				flex: 1;
+				min-width: 150px;
+	
+				.lbl-checkbox{
+					padding: .5em 0;
+					font-size: 14px;
+					display: flex;
+					flex-direction: row;
+					p{
+						padding: 0 .5em;
+					}
+				}
+			}
+		}
+
+		.div-input{
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			padding: .5em 0;
+
+			input[type='date'], input[type='number'], select{
+				font-size: 12px;
+				width: 10em;
+			}
+	
+			input[type='date']::-webkit-inner-spin-button{
+					-webkit-appearance: none;
+			}
+			
+			label {
+				font-size: 16px;
+	
+				p{
+					padding: .4em;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.close-filter {
+	right: -23em !important;
+	@include transition(.5s);
+}

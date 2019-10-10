@@ -1,0 +1,70 @@
+.dropdownfilter{
+    background-color: #FFF;
+    border-radius: 3px;
+    min-width: 150px;
+    max-width: 180px;
+    transition: 0.5s;
+    position: relative;
+    box-shadow: 2px 2px 11px rgba(171, 174, 185, 0.5)
+}
+
+.dropdownfilter.border{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    border-radius: 5px
+}
+
+.dropdownfilter .display{
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    justify-content: center
+}
+
+.dropdownfilter .display h1{
+    background-color: #FFF;
+    padding: 8px;
+    border-radius: 2px;
+    width: 125px
+}
+
+.dropdownfilter svg{
+    padding: 0px 4px
+}
+
+.dropdownfilter:hover{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+}
+
+.dropdownfilter:hover > .filterlist{
+    max-height: 900px;
+    transition: max-height 0.5s;
+    transition-timing-function: ease-in-out;
+
+}
+
+.dropdownfilter .filterlist{
+    width: 177px;
+    position: absolute;
+    background-color: #FFF;
+    max-height: 0px;
+    transition: max-height 0.5s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    margin-top: 8px;
+    border-radius: 3px;
+    box-sizing: border-box
+}
+
+.dropdownfilter .filterlist li{
+    padding: 8px;
+    margin: 4px
+}
+
+.dropdownfilter .filterlist li:hover{
+    background-color: #2196f3;
+    color: #FFF;
+    border-radius: 3px;
+}

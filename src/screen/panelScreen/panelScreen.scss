@@ -1,0 +1,52 @@
+@import '../../styles/main.scss';
+
+.content-page{
+
+	.loadingGif{
+		position: absolute;
+		display: flex;
+		top: 40vh;
+		align-content: center
+	}
+
+	.content-grid{
+		position: absolute;
+    top: 4em;
+    right: 310px;
+    bottom: 2em;
+    left: 1em;
+		@include transition(.5s);
+	}
+
+	.div-btns{
+
+		.btn-grid{
+			position: absolute;
+			left: 1em;
+			display: flex;
+			padding: 4px;
+			background-color: $light-primary-color;
+			margin: 0; 
+			@include btn-primary();
+			p{
+				margin: 0;
+			}
+		}
+		.icon {
+			@include simple-icon();
+		}
+	
+		.btn-filter{
+			position: fixed;
+			right: 2em;
+			z-index: 40;
+			padding: .5em;
+			@include btn-filter();
+		}
+	}
+}
+
+.close-content{
+	right: 2em !important;
+	@include transition(.5s);
+}

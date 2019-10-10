@@ -1,0 +1,56 @@
+@import '../../styles/main.scss';
+
+.header {
+	position: fixed;
+	display: flex;
+  justify-content: flex-end;
+	box-shadow: $light-shadow;
+	background-color: #fafafa;
+	min-height: 44px;
+	width: 100%;
+	font-size: 16px;
+	z-index: 40;
+	top: 0;
+	left: 0;
+
+	.option-header {
+		display: flex;
+		margin-right: .5em;
+		padding-left: 10px;
+		border-left: 2px solid $divider_color;
+
+		.data{
+			margin-right: 5px;
+			align-self: center;
+
+			h2{
+				margin: 0;
+				font-size: 14px;
+				font-weight: normal;
+			}
+		}
+
+		.logout{
+			color: $accent-color;
+			align-self: center;
+			border: none;
+			margin-left: 4em;
+			font-size: 14px;
+			overflow: visible;
+			background-color: transparent;
+			text-decoration: none;
+			svg{
+				height: 25px;
+				width: 25px;
+				fill: $accent-color;
+			}
+
+			&:hover{
+				color: $dark_secundary-color;
+			}
+		}
+	}
+}
+
+
+

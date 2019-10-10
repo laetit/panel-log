@@ -1,0 +1,33 @@
+@import '../../styles/main.scss';
+
+.get-endpoint{
+	display: flex;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+	justify-content: center; 
+	align-items: center;
+	flex-direction: column;
+	border-left: 5px solid #2196f3;
+    padding: 50px;
+    background-color: white;
+	@include border-radius(32px);
+	@include shadow($dark-shadow);
+	input{
+		border: 1px solid #ccc;
+		padding: 7px;
+		margin-top: 5px;
+		resize: none;
+		background-color: #FFF;
+		width: 100%;
+	}
+	label{
+		margin: 10px;
+		font-size: 20px;
+
+	}
+	button{
+		background-color: $light_primary-color;
+		@include btn-login();
+	}
+}
